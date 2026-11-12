@@ -3,169 +3,81 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Projeto Arca</title>
-<meta name="description" content="Uma iniciativa de conscientização sobre os danos das redes sociais e os incentivos do modelo de negócio dos feeds. Redesenhando um futuro humano e livre.">
-<meta property="og:title" content="Projeto Arca">
-<meta property="og:description" content="Redesenhando um futuro humano e livre.">
+<title>Projeto Arca — Um futuro humano e livre</title>
+<meta name="description" content="Mais autonomia para escolher. Mais espaço para viver. Conheça o Projeto Arca, uma iniciativa sobre redes sociais, atenção e vida em comum.">
+<meta property="og:title" content="Projeto Arca — Redesenhando um futuro humano e livre.">
+<meta property="og:description" content="Mais autonomia para escolher. Mais espaço para viver. Uma conversa sobre redes sociais, atenção e vida em comum.">
 <meta property="og:image" content="https://projetoarca.github.io/assets/capa-github.png">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://projetoarca.github.io/">
 <meta name="theme-color" content="#153F35">
+<link rel="canonical" href="https://projetoarca.github.io/">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<style>
-:root {
-  --arca-mata:#153F35; --arca-papel:#F4F0E6; --arca-argila:#B65339;
-  --arca-salvia:#A9BAA5; --arca-ink:#202E29; --arca-muted:#58665E;
-  --font-display:Georgia,"Times New Roman",serif;
-  --font-body:Arial,Helvetica,sans-serif;
-  --space-1:8px; --space-2:16px; --space-3:24px; --space-4:32px;
-  --space-6:48px; --space-8:64px; --content-max:1120px;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
-body{margin:0;background:var(--arca-papel);color:var(--arca-ink);font:18px/28px var(--font-body)}
-a{color:var(--arca-mata)}
-:focus-visible{outline:3px solid var(--arca-argila);outline-offset:4px}
-.faixa :focus-visible{outline-color:var(--arca-papel)}
-.wrap{max-width:var(--content-max);margin:0 auto;padding:0 var(--space-3)}
-.pular{position:absolute;left:-9999px}
-.pular:focus{left:var(--space-2);top:var(--space-2);background:var(--arca-papel);padding:var(--space-1) var(--space-2)}
-
-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:var(--space-3);
-  padding-top:var(--space-3);padding-bottom:var(--space-3);border-bottom:1px solid var(--arca-salvia);flex-wrap:wrap}
-header img{display:block;height:56px;width:auto}
-nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:var(--space-1) var(--space-3)}
-nav a{display:inline-block;min-height:44px;line-height:44px;text-decoration:none;color:var(--arca-mata)}
-nav a:hover{text-decoration:underline;text-underline-offset:4px}
-
-.hero .wrap{display:grid;grid-template-columns:1.6fr 1fr;align-items:center;gap:var(--space-6);
-  padding-top:var(--space-8);padding-bottom:var(--space-8)}
-.rotulo{font:bold 12px/16px var(--font-body);letter-spacing:.06em;text-transform:uppercase;color:var(--arca-mata);margin:0 0 var(--space-2)}
-h1,h2{font-family:var(--font-display);font-weight:normal;color:var(--arca-mata)}
-h1{font-size:64px;line-height:68px;margin:0 0 var(--space-3)}
-.lead{color:var(--arca-muted);max-width:34em;margin:0 0 var(--space-4)}
-.acoes{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-3)}
-.botao{display:inline-block;background:var(--arca-mata);color:var(--arca-papel);font-weight:bold;
-  text-decoration:none;padding:12px 28px;border-radius:999px;min-height:44px}
-.botao:hover{background:var(--arca-ink)}
-.link-seta{text-decoration:none;min-height:44px;line-height:44px}
-.link-seta:hover{text-decoration:underline;text-underline-offset:4px}
-.simbolo{justify-self:center;width:min(240px,100%);height:auto}
-
-.faixa{background:var(--arca-mata);color:var(--arca-papel)}
-.faixa ul{list-style:none;margin:0;padding:var(--space-3) 0;display:flex;flex-wrap:wrap;gap:var(--space-1) var(--space-3);
-  font:bold 14px/20px var(--font-body);letter-spacing:.06em;text-transform:uppercase}
-.faixa li+li::before{content:"/";margin-right:var(--space-3);opacity:.7}
-
-main section{padding:var(--space-8) 0;border-bottom:1px solid var(--arca-salvia)}
-main section:last-of-type{border-bottom:0}
-h2{font-size:40px;line-height:44px;margin:0 0 var(--space-3)}
-section p, section li{max-width:65ch}
-section ul{padding-left:1.2em}
-.num{display:block;font:bold 12px/16px var(--font-body);letter-spacing:.06em;color:var(--arca-muted);margin-bottom:var(--space-1)}
-
-footer{background:var(--arca-mata);color:var(--arca-papel)}
-footer .wrap{padding-top:var(--space-4);padding-bottom:var(--space-4);display:flex;justify-content:space-between;flex-wrap:wrap;gap:var(--space-2);font-size:14px;line-height:20px}
-footer a{color:var(--arca-papel)}
-
-@media (max-width:760px){
-  .wrap{padding:0 var(--space-2)}
-  header img{height:44px}
-  .hero .wrap{grid-template-columns:1fr;padding-top:var(--space-6);padding-bottom:var(--space-6)}
-  h1{font-size:40px;line-height:44px}
-  h2{font-size:32px;line-height:36px}
-  .simbolo{width:96px;justify-self:start;order:3}
-  .botao{width:100%;text-align:center}
-  main section{padding:var(--space-6) 0}
-}
-</style>
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/site.js" defer></script>
 </head>
 <body>
-<a class="pular" href="#conteudo">Pular para o conteúdo</a>
-
-<header>
-  <div class="wrap">
-    <a href="#topo" aria-label="Projeto Arca, início"><img src="assets/logo-verde.svg" alt="Projeto Arca" width="148" height="56"></a>
-    <nav aria-label="Principal">
-      <ul>
-        <li><a href="#projeto">Projeto</a></li>
-        <li><a href="#evidencias">Evidências</a></li>
-        <li><a href="#participacao">Participação</a></li>
-        <li><a href="#transparencia">Transparência</a></li>
-      </ul>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<header class="header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#topo" aria-label="Projeto Arca, início"><img src="assets/logo-verde.svg" alt="Projeto Arca" width="148" height="56"></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu <span aria-hidden="true">+</span></button>
+    <nav id="nav" aria-label="Principal">
+      <a href="#projeto">O projeto</a><a href="#evidencias">Evidências</a><a href="#transparencia">Transparência</a><a class="nav-action" href="#participacao">Faça parte <span aria-hidden="true">↗</span></a>
     </nav>
   </div>
 </header>
-
-<div class="hero" id="topo">
-  <div class="wrap">
-    <div>
-      <p class="rotulo">Atenção é vida em comum.</p>
-      <h1>Redesenhando um futuro humano e livre.</h1>
-      <p class="lead">Uma iniciativa de conscientização sobre os danos das redes sociais e os incentivos do modelo de negócio dos feeds.</p>
-      <div class="acoes">
-        <a class="botao" href="#projeto">Conheça o projeto</a>
-        <a class="link-seta" href="#principios">Nossos princípios →</a>
-      </div>
-    </div>
-    <img class="simbolo" src="assets/simbolo.svg" alt="" width="124" height="120">
-  </div>
-</div>
-
-<div class="faixa">
-  <div class="wrap">
-    <ul aria-label="Compromissos">
-      <li>Evidência rastreável</li>
-      <li>Independência</li>
-      <li>Contas abertas</li>
-    </ul>
-  </div>
-</div>
-
 <main id="conteudo">
-  <div class="wrap">
-    <section id="projeto" aria-labelledby="t-projeto">
-      <span class="num">01</span>
-      <h2 id="t-projeto">Nossa proposta</h2>
-      <p>Traduzir evidências em compreensão e caminhos de ação. Os públicos iniciais são pais de menores de 16 anos e millennials.</p>
-    </section>
+  <section class="hero wrap" id="topo" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="dot" aria-hidden="true"></span> Atenção é vida em comum</p>
+      <h1 id="hero-title">Redesenhando<br>um futuro<br><em>humano e livre.</em></h1>
+      <p class="hero-intro">Mais autonomia para escolher.<br>Mais espaço para viver.</p>
+      <p class="hero-description">A Arca convida você a repensar nossa relação com as redes sociais — e a imaginar o que queremos no lugar.</p>
+      <div class="actions"><a class="button" href="#projeto">Conheça a Arca <span aria-hidden="true">↗</span></a><a class="text-link" href="#principios">O que nos move <span aria-hidden="true">↓</span></a></div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="art-top"><span>UM OUTRO HORIZONTE</span><span>↗</span></div>
+      <div class="sun"></div><div class="arch"></div><div class="horizon horizon-back"></div><div class="horizon horizon-front"></div>
+      <div class="art-bottom"><span>Para além<br>do próximo scroll.</span><span class="art-symbol">↗</span></div>
+    </div>
+    <div class="hero-bottom"><span>Uma iniciativa independente, em construção.</span><a href="#projeto" aria-label="Explore o projeto">Explore <span aria-hidden="true">↓</span></a></div>
+  </section>
 
-    <section id="principios" aria-labelledby="t-principios">
-      <span class="num">02</span>
-      <h2 id="t-principios">Princípios</h2>
-      <ul>
-        <li>Sem fins lucrativos e sem patrocínio.</li>
-        <li>Nunca publicidade paga em redes sociais; nunca no feed de ninguém.</li>
-        <li>Contas abertas.</li>
-        <li>A internet é de todos: o foco é o modelo de negócio do feed.</li>
-      </ul>
-    </section>
+  <section class="intro section wrap" id="projeto" aria-labelledby="project-title">
+    <div class="section-label"><span>01 / O projeto</span><span class="fine-line"></span></div>
+    <div class="intro-grid"><h2 id="project-title">A internet é de todos.<br><span class="muted">O nosso tempo<br>também deveria ser.</span></h2>
+    <div class="intro-copy"><p class="large-copy">Queremos abrir uma conversa sobre os feeds, os interesses por trás deles e o espaço que ocupam na nossa vida.</p><p>A Arca nasce para tornar acessíveis as evidências sobre os danos das redes sociais e apoiar escolhas mais conscientes. Nosso foco está no modelo de negócio que disputa a atenção.</p><p>Começamos com pais de menores de 16 anos e millennials: quem está acompanhando a infância de perto e quem viu a internet mudar.</p></div></div>
+    <div class="approach"><div><span class="small-index">01</span><h3>Entender</h3><p>Conhecer como as plataformas funcionam e o que as pesquisas mostram.</p></div><div><span class="small-index">02</span><h3>Escolher</h3><p>Ter mais clareza para decidir que lugar as redes ocupam na própria vida.</p></div><div><span class="small-index">03</span><h3>Reconectar</h3><p>Abrir espaço para os vínculos, as conversas e o que importa fora do feed.</p></div></div>
+  </section>
 
-    <section id="evidencias" aria-labelledby="t-evidencias">
-      <span class="num">03</span>
-      <h2 id="t-evidencias">Evidências</h2>
-      <p>O dossiê está em preparação. As referências serão publicadas após conferência nas fontes originais.</p>
-    </section>
+  <section class="evidence section" id="evidencias" aria-labelledby="evidence-title"><div class="wrap evidence-grid">
+    <div><p class="eyebrow">02 / Evidências</p><h2 id="evidence-title">Boas perguntas.<br><em>Fontes à vista.</em></h2><p class="evidence-lead">Uma conversa séria começa por saber o que a pesquisa permite afirmar — e o que ainda está em aberto.</p><span class="status"><span class="dot" aria-hidden="true"></span> Dossiê em preparação</span></div>
+    <div class="evidence-notes"><article><span>01</span><div><h3>Voltar à fonte</h3><p>Conferir cada referência no estudo ou documento original, antes de publicá-la.</p></div></article><article><span>02</span><div><h3>Dar contexto</h3><p>Apresentar os resultados junto de seus limites, sem transformar associação em causalidade.</p></div></article><article><span>03</span><div><h3>Compartilhar com clareza</h3><p>Traduzir a pesquisa para uma linguagem acessível, mantendo as referências disponíveis.</p></div></article><p class="evidence-footnote">O dossiê será publicado após a conferência das fontes. Até lá, apresentamos aqui o compromisso que orienta esse trabalho.</p></div>
+  </div></section>
 
-    <section id="participacao" aria-labelledby="t-participacao">
-      <span class="num">04</span>
-      <h2 id="t-participacao">Participação</h2>
-      <p>Nesta fase de estruturação, o projeto prevê contribuições em bens e serviços, sem recebimento de dinheiro. Os canais de participação serão informados após sua definição.</p>
-    </section>
+  <section class="principles section wrap" id="principios" aria-labelledby="principles-title">
+    <div class="section-label"><span>03 / O que nos move</span><span class="fine-line"></span></div>
+    <div class="principles-head"><h2 id="principles-title">A forma de agir<br>também é a mensagem.</h2><p>O futuro que defendemos começa nas escolhas que fazemos como projeto.</p></div>
+    <div class="principle-list">
+      <article><span class="small-index">01</span><h3>Independência</h3><p>Sem fins lucrativos, sem patrocínio. Uma iniciativa sustentada por contribuições.</p><span class="principle-mark" aria-hidden="true">↗</span></article>
+      <article><span class="small-index">02</span><h3>Respeito à atenção</h3><p>Nunca publicidade paga nas redes sociais. Nunca no feed de ninguém.</p><span class="principle-mark" aria-hidden="true">↗</span></article>
+      <article><span class="small-index">03</span><h3>Contas abertas</h3><p>Compromisso com a transparência sobre os recursos recebidos e sua utilização.</p><span class="principle-mark" aria-hidden="true">↗</span></article>
+      <article><span class="small-index">04</span><h3>Uma internet de todos</h3><p>A tecnologia pode ampliar nossas possibilidades. É o modelo de negócio do feed que queremos colocar em discussão.</p><span class="principle-mark" aria-hidden="true">↗</span></article>
+    </div>
+  </section>
 
-    <section id="transparencia" aria-labelledby="t-transparencia">
-      <span class="num">05</span>
-      <h2 id="t-transparencia">Transparência</h2>
-      <p>Documentos institucionais e registros de prestação de contas serão disponibilizados conforme forem concluídos e revisados.</p>
-    </section>
-  </div>
+  <section class="participation wrap" id="participacao" aria-labelledby="participation-title"><div class="participation-inner">
+    <div class="participation-main"><p class="eyebrow">04 / Faça parte</p><h2 id="participation-title">Um futuro mais humano<br>se constrói <em>em comum.</em></h2><p>Há muitas formas de contribuir: com tempo, conhecimento, bens ou serviços. Estamos preparando os caminhos para que essa participação aconteça.</p><a class="button" href="https://github.com/projetoarca/projetoarca.github.io">Acompanhe no GitHub <span aria-hidden="true">↗</span></a></div>
+    <aside class="participation-note"><span class="note-label">NOSSO MOMENTO</span><h3>Estamos <br>começando.</h3><p>Nesta fase de estruturação, as contribuições previstas são em bens e serviços. Não recebemos doações em dinheiro.</p><p>Os canais de participação serão divulgados aqui quando estiverem definidos.</p></aside>
+  </div></section>
+
+  <section class="transparency section wrap" id="transparencia" aria-labelledby="transparency-title"><div class="transparency-grid"><div><p class="eyebrow">05 / Transparência</p><h2 id="transparency-title">Tudo às claras.<br><span class="muted">Desde o início.</span></h2><p>Construir confiança também é dizer em que etapa estamos.</p></div><div class="disclosures">
+    <details open><summary>Documentos do projeto <span aria-hidden="true">+</span></summary><p>Os documentos institucionais serão disponibilizados conforme forem concluídos e revisados. A Arca ainda está em estruturação.</p></details>
+    <details><summary>Contribuições e prestação de contas <span aria-hidden="true">+</span></summary><p>Os registros de contribuições e de prestação de contas serão publicados conforme forem concluídos e revisados. Nesta fase, não há recebimento de dinheiro.</p></details>
+    <details><summary>Pesquisa e referências <span aria-hidden="true">+</span></summary><p>O dossiê de evidências está em preparação. As referências serão disponibilizadas após a conferência dos documentos originais.</p></details>
+  </div></div></section>
 </main>
-
-<footer>
-  <div class="wrap">
-    <span>Projeto Arca · iniciativa em construção</span>
-    <a href="https://github.com/projetoarca">github.com/projetoarca</a>
-  </div>
-</footer>
+<footer class="footer"><div class="wrap"><div class="footer-top"><a class="footer-brand" href="#topo" aria-label="Projeto Arca, voltar ao início"><img src="assets/logo-verde.svg" width="188" height="71" alt="Projeto Arca"></a><p>Redesenhando um futuro<br>humano e livre.</p><a class="back-top" href="#topo">Voltar ao início <span aria-hidden="true">↑</span></a></div><div class="footer-bottom"><span>Projeto Arca · iniciativa em construção</span><span>Independência. Evidência. Vida em comum.</span><a href="https://github.com/projetoarca">GitHub <span aria-hidden="true">↗</span></a></div></div></footer>
 </body>
 </html>
