@@ -51,3 +51,16 @@
     addEventListener('hashchange', fromHash);
   });
 })();
+(() => {
+  document.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const raw = document.getElementById('raw-' + btn.dataset.copy);
+      if (!raw) return;
+      try { await navigator.clipboard.writeText(raw.value); }
+      catch { raw.select(); document.execCommand('copy'); }
+      const label = btn.textContent;
+      btn.textContent = 'Copiada!'; btn.classList.add('is-done');
+      setTimeout(() => { btn.textContent = label; btn.classList.remove('is-done'); }, 2000);
+    });
+  });
+})();
