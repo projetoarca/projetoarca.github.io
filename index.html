@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projeto Arca</title>
+<meta name="description" content="Uma iniciativa de conscientização sobre os danos das redes sociais e os incentivos do modelo de negócio dos feeds. Redesenhando um futuro humano e livre.">
+<meta property="og:title" content="Projeto Arca">
+<meta property="og:description" content="Redesenhando um futuro humano e livre.">
+<meta property="og:image" content="https://projetoarca.github.io/assets/capa-github.png">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#153F35">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<style>
+:root {
+  --arca-mata:#153F35; --arca-papel:#F4F0E6; --arca-argila:#B65339;
+  --arca-salvia:#A9BAA5; --arca-ink:#202E29; --arca-muted:#58665E;
+  --font-display:Georgia,"Times New Roman",serif;
+  --font-body:Arial,Helvetica,sans-serif;
+  --space-1:8px; --space-2:16px; --space-3:24px; --space-4:32px;
+  --space-6:48px; --space-8:64px; --content-max:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--arca-papel);color:var(--arca-ink);font:18px/28px var(--font-body)}
+a{color:var(--arca-mata)}
+:focus-visible{outline:3px solid var(--arca-argila);outline-offset:4px}
+.faixa :focus-visible{outline-color:var(--arca-papel)}
+.wrap{max-width:var(--content-max);margin:0 auto;padding:0 var(--space-3)}
+.pular{position:absolute;left:-9999px}
+.pular:focus{left:var(--space-2);top:var(--space-2);background:var(--arca-papel);padding:var(--space-1) var(--space-2)}
+
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:var(--space-3);
+  padding-top:var(--space-3);padding-bottom:var(--space-3);border-bottom:1px solid var(--arca-salvia);flex-wrap:wrap}
+header img{display:block;height:56px;width:auto}
+nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:var(--space-1) var(--space-3)}
+nav a{display:inline-block;min-height:44px;line-height:44px;text-decoration:none;color:var(--arca-mata)}
+nav a:hover{text-decoration:underline;text-underline-offset:4px}
+
+.hero .wrap{display:grid;grid-template-columns:1.6fr 1fr;align-items:center;gap:var(--space-6);
+  padding-top:var(--space-8);padding-bottom:var(--space-8)}
+.rotulo{font:bold 12px/16px var(--font-body);letter-spacing:.06em;text-transform:uppercase;color:var(--arca-mata);margin:0 0 var(--space-2)}
+h1,h2{font-family:var(--font-display);font-weight:normal;color:var(--arca-mata)}
+h1{font-size:64px;line-height:68px;margin:0 0 var(--space-3)}
+.lead{color:var(--arca-muted);max-width:34em;margin:0 0 var(--space-4)}
+.acoes{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-3)}
+.botao{display:inline-block;background:var(--arca-mata);color:var(--arca-papel);font-weight:bold;
+  text-decoration:none;padding:12px 28px;border-radius:999px;min-height:44px}
+.botao:hover{background:var(--arca-ink)}
+.link-seta{text-decoration:none;min-height:44px;line-height:44px}
+.link-seta:hover{text-decoration:underline;text-underline-offset:4px}
+.simbolo{justify-self:center;width:min(240px,100%);height:auto}
+
+.faixa{background:var(--arca-mata);color:var(--arca-papel)}
+.faixa ul{list-style:none;margin:0;padding:var(--space-3) 0;display:flex;flex-wrap:wrap;gap:var(--space-1) var(--space-3);
+  font:bold 14px/20px var(--font-body);letter-spacing:.06em;text-transform:uppercase}
+.faixa li+li::before{content:"/";margin-right:var(--space-3);opacity:.7}
+
+main section{padding:var(--space-8) 0;border-bottom:1px solid var(--arca-salvia)}
+main section:last-of-type{border-bottom:0}
+h2{font-size:40px;line-height:44px;margin:0 0 var(--space-3)}
+section p, section li{max-width:65ch}
+section ul{padding-left:1.2em}
+.num{display:block;font:bold 12px/16px var(--font-body);letter-spacing:.06em;color:var(--arca-muted);margin-bottom:var(--space-1)}
+
+footer{background:var(--arca-mata);color:var(--arca-papel)}
+footer .wrap{padding-top:var(--space-4);padding-bottom:var(--space-4);display:flex;justify-content:space-between;flex-wrap:wrap;gap:var(--space-2);font-size:14px;line-height:20px}
+footer a{color:var(--arca-papel)}
+
+@media (max-width:760px){
+  .wrap{padding:0 var(--space-2)}
+  header img{height:44px}
+  .hero .wrap{grid-template-columns:1fr;padding-top:var(--space-6);padding-bottom:var(--space-6)}
+  h1{font-size:40px;line-height:44px}
+  h2{font-size:32px;line-height:36px}
+  .simbolo{width:96px;justify-self:start;order:3}
+  .botao{width:100%;text-align:center}
+  main section{padding:var(--space-6) 0}
+}
+</style>
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<header>
+  <div class="wrap">
+    <a href="#topo" aria-label="Projeto Arca, início"><img src="assets/logo-verde.svg" alt="Projeto Arca" width="148" height="56"></a>
+    <nav aria-label="Principal">
+      <ul>
+        <li><a href="#projeto">Projeto</a></li>
+        <li><a href="#evidencias">Evidências</a></li>
+        <li><a href="#participacao">Participação</a></li>
+        <li><a href="#transparencia">Transparência</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="hero" id="topo">
+  <div class="wrap">
+    <div>
+      <p class="rotulo">Atenção é vida em comum.</p>
+      <h1>Redesenhando um futuro humano e livre.</h1>
+      <p class="lead">Uma iniciativa de conscientização sobre os danos das redes sociais e os incentivos do modelo de negócio dos feeds.</p>
+      <div class="acoes">
+        <a class="botao" href="#projeto">Conheça o projeto</a>
+        <a class="link-seta" href="#principios">Nossos princípios →</a>
+      </div>
+    </div>
+    <img class="simbolo" src="assets/simbolo.svg" alt="" width="124" height="120">
+  </div>
+</div>
+
+<div class="faixa">
+  <div class="wrap">
+    <ul aria-label="Compromissos">
+      <li>Evidência rastreável</li>
+      <li>Independência</li>
+      <li>Contas abertas</li>
+    </ul>
+  </div>
+</div>
+
+<main id="conteudo">
+  <div class="wrap">
+    <section id="projeto" aria-labelledby="t-projeto">
+      <span class="num">01</span>
+      <h2 id="t-projeto">Nossa proposta</h2>
+      <p>Traduzir evidências em compreensão e caminhos de ação. Os públicos iniciais são pais de menores de 16 anos e millennials.</p>
+    </section>
+
+    <section id="principios" aria-labelledby="t-principios">
+      <span class="num">02</span>
+      <h2 id="t-principios">Princípios</h2>
+      <ul>
+        <li>Sem fins lucrativos e sem patrocínio.</li>
+        <li>Nunca publicidade paga em redes sociais; nunca no feed de ninguém.</li>
+        <li>Contas abertas.</li>
+        <li>A internet é de todos: o foco é o modelo de negócio do feed.</li>
+      </ul>
+    </section>
+
+    <section id="evidencias" aria-labelledby="t-evidencias">
+      <span class="num">03</span>
+      <h2 id="t-evidencias">Evidências</h2>
+      <p>O dossiê está em preparação. As referências serão publicadas após conferência nas fontes originais.</p>
+    </section>
+
+    <section id="participacao" aria-labelledby="t-participacao">
+      <span class="num">04</span>
+      <h2 id="t-participacao">Participação</h2>
+      <p>Nesta fase de estruturação, o projeto prevê contribuições em bens e serviços, sem recebimento de dinheiro. Os canais de participação serão informados após sua definição.</p>
+    </section>
+
+    <section id="transparencia" aria-labelledby="t-transparencia">
+      <span class="num">05</span>
+      <h2 id="t-transparencia">Transparência</h2>
+      <p>Documentos institucionais e registros de prestação de contas serão disponibilizados conforme forem concluídos e revisados.</p>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Projeto Arca · iniciativa em construção</span>
+    <a href="https://github.com/projetoarca">github.com/projetoarca</a>
+  </div>
+</footer>
+</body>
+</html>
